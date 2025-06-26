@@ -1,0 +1,116 @@
+:root {
+      --bg-main: #0f0f1a;
+      --text-main: #ffffff;
+      --text-secondary: #c0c0c0;
+      --accent: #ff9900;
+      --hover: #ff6600;
+      --border: #1f1f3d;
+      --surface: #14141f;
+    }
+    body.mode {
+      --bg-main: #f4f4f4;
+      --text-main: #ffffff;
+      --text-secondary: #555;
+      --accent: #ff6600;
+      --hover: #ff9900;
+      --border: #ccc;
+      --surface: #ffffff;
+    }
+    * {
+      box-sizing: border-box;
+      font-family: 'Press Start 2P', monospace;
+      transition: all 0.3s ease;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+    }
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffff50;
+      animation: fadeIn 1s ease-in-out;
+    }
+    h1, h3 {
+      text-align: center;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+    input[type="number"], input[type="text"], input[type="file"] {
+      background-color: #1f1f3d;
+      color: var(--text-main);
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 0.5rem;
+      margin: 0.3rem 0;
+      width: 100%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.8rem;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    thead th {
+      background-color: var(--border);
+      color: var(--accent);
+    }
+    button {
+      background: linear-gradient(45deg, var(--accent), var(--hover));
+      border: none;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      margin: 0.4rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px var(--accent), 0 0 20px var(--hover);
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--hover), 0 0 30px var(--accent);
+    }
+    .btn-hapus {
+      background-color: var(--border);
+      color: var(--text-secondary);
+      border-radius: 6px;
+    }
+    .btn-hapus:hover {
+      background-color: var(--accent);
+      color: white;
+    }
+    #hasil {
+      margin-top: 2rem;
+    }
+    .toggle-darkmode {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--surface);
+      color: var(--text-main);
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      h1, h3 {
+        font-size: 1.3rem;
+      }
+      button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
